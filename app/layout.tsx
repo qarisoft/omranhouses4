@@ -62,7 +62,7 @@ export default function RootLayout({
               </Link>
             </footer> */}
             <footer className={"flex-1 pt-5 border-t "}>
-              <div className="md:flex justify-between md:max-w-4xl mx-auto pb-3 gap-3">
+              <div className="md:flex justify-between md:max-w-5xl mx-auto pb-3 gap-3">
                 <div className=" md:flex flex-col   text-center md:text-start gap-1 text-large">
                   <h1 className="font-extrabold">روابط هامة</h1>
                   <div className="font-medium">الرئيسية</div>
@@ -78,7 +78,7 @@ export default function RootLayout({
                   <div className=" flex justify-center">
                     <Image
                       alt="NextUI hero Image"
-                      src="./logo.jpeg"
+                      src="./image/logo-big.png"
                       width={300}
                     />
                   </div>
@@ -107,7 +107,7 @@ export default function RootLayout({
                   </p>
                 </div>
 
-                <div className="flex flex-col gap-1 text-center text-large">
+                <div className="flex flex-col gap-1 text-center text-large ">
                   <a
                     className="font-extrabold"
                     href={

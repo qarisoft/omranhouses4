@@ -1,16 +1,12 @@
+import { PropsWithChildren } from "react";
+
 export const Achievements = () => {
   const achievements = "";
 
   return (
-    <>
-      <div
-        className="flex flex-col  md:flex-row  gap-6     bg-[#F6F6F696]"
-        style={{
-          backgroundImage: `url('./image/back.png')`,
-          backgroundBlendMode: "saturation",
-        }}
-      >
-        <div className="mx-auto text-center  p-6">
+    <div className="flex justify-center">
+      <div className="grid grid-cols-1  md:grid-cols-3 w-full  space-y-2 gap-6  max-w-5xl  mt-5    bg-[#F6F6F696]">
+        <ItemContainer key={"power-1"}>
           <svg
             className="size-28 text-center mx-auto text-[#a76d16]"
             fill="none"
@@ -28,18 +24,16 @@ export const Achievements = () => {
 
           <h1 className="text-3xl font-medium ">100+</h1>
           <h1 className="text-3xl font-medium ">متر مربع تم تطويرة</h1>
-        </div>
-
-        <div className="mx-auto text-center  p-6">
+        </ItemContainer>
+        <ItemContainer key={"power-2"}>
           <span
             className={"icon-investment text-[#a76d16]"}
             style={{ fontSize: "100px" }}
           />
           <h1 className="text-3xl font-semibold ">100+</h1>
           <h1 className="text-3xl font-normal ">مبنى تم انشائة</h1>
-        </div>
-
-        <div className="mx-auto text-center  p-6">
+        </ItemContainer>
+        <ItemContainer key={"power-3"}>
           <svg
             className="size-28 text-center mx-auto text-[#a76d16]"
             fill="none"
@@ -57,9 +51,9 @@ export const Achievements = () => {
 
           <h1 className="text-3xl font-semibold ">100+</h1>
           <h1 className="text-3xl font-normal ">وحدة سكنية</h1>
-        </div>
+        </ItemContainer>
       </div>
-    </>
+    </div>
   );
 };
 
@@ -69,10 +63,24 @@ interface ItemProps {
   svg: any;
 }
 
+const ItemContainer = ({ children }: PropsWithChildren) => {
+  return (
+    <div
+      className=" text-center  p-6  "
+      style={{
+        backgroundImage: `url('./image/back.png')`,
+        backgroundBlendMode: "saturation",
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
 const Item = ({ txt, number }: ItemProps) => {
   return (
     <>
-      <div className="mx-auto text-center  p-6">
+      <div className="  ">
         {/*<span className="icon icon-healthcare font-medium text-6xl"></span>*/}
 
         <svg

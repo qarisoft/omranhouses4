@@ -6,6 +6,7 @@ import {
   Pagination,
   Scrollbar,
 } from "swiper/modules";
+import "swiper/css/bundle";
 import { Image } from "@heroui/image";
 
 export const Shareholders = () => {

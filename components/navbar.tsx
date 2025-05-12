@@ -7,16 +7,21 @@ import {
   NavbarBrand,
   NavbarItem,
   NavbarMenuItem,
-} from "@heroui/navbar";
-import { Kbd } from "@heroui/kbd";
-import { Link } from "@heroui/link";
-import { Input } from "@heroui/input";
-import { link as linkStyles } from "@heroui/theme";
+  Image,
+  Kbd,
+  Link,
+  Input,
+  link as linkStyles,
+} from "@heroui/react";
+// import { Kbd } from "@heroui/kbd";
+// import { Link } from "@heroui/link";
+// import { Input } from "@heroui/input";
+// import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
@@ -70,7 +75,7 @@ export const Navbar = () => {
           "data-[active=true]:after:bg-primary",
         ],
       }}
-      height={80}
+      height={90}
       isBlurred={false}
       isMenuOpen={isMenuOpen}
       maxWidth="xl"
@@ -79,8 +84,24 @@ export const Navbar = () => {
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Image alt="'" height={60} src={"/logo-r.png"} width={80} />
+          <NextLink
+            className="flex justify-start items-center gap-1 bg-slate-00 h-[90px] bg-slate-50    00 relative p-1"
+            href="/"
+          >
+            {/* <div className="absolute bottom-1 left-0 w-full h-5 bg-black opacity-50 shadow-lg"></div> */}
+            <Image
+              alt="'"
+              className=" top-0   left-0"
+              height={80}
+              src={"/logo-small-1.png"}
+              width={80}
+            />
+            <Image
+              alt="'"
+              className="bottom-0 mt-7    left-0"
+              src={"/logo-text.png"}
+              width={120}
+            />
             {/* <Logo /> */}
             {/* <p className="font-bold text-inherit">ACME</p> */}
           </NextLink>

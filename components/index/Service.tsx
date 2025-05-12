@@ -5,7 +5,7 @@ interface ServiceProps {
   data?: string[];
   icon?: string;
 }
-export const Service = ({ title, description, data }: ServiceProps) => {
+export const Service = ({ title, description }: ServiceProps) => {
   return (
     <>
       <div
@@ -22,9 +22,9 @@ export const Service = ({ title, description, data }: ServiceProps) => {
           </div>
 
           <div className="h-4 " />
-          <div className="grid md:grid-cols-2 ">
+          <div className="grid md:grid-cols-2 gap-5  max-w-5xl mx-auto ">
             {siteConfig.serviceList.map((value, index) => (
-              <div key={index} className={"mb-2"}>
+              <div key={index} className={"mb-2 "}>
                 <ServiceItem
                   description={value.description}
                   icon={value.icon}
@@ -43,7 +43,7 @@ const ServiceItem = ({ title, description, data, icon }: ServiceProps) => {
   // @ts-ignore
   return (
     <div className="war overflow-hidden">
-      <div className="flip-card  h-64 sm:w-[300px] md:w-[500px] flex m-auto ">
+      <div className="flip-card  h-64  flex m-auto ">
         <div className="flip-card-inner  ">
           <div
             className="flip-card-front flex justify-center bg-white bg-cover bg-repeat-round"

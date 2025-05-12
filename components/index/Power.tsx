@@ -1,3 +1,5 @@
+import { Card, CardBody, CardHeader } from "@heroui/react";
+
 import { siteConfig } from "@/config/site";
 interface PowerProps {
   title: string;
@@ -7,30 +9,54 @@ interface PowerProps {
 export const Power = ({ title, description, data }: PowerProps) => {
   return (
     <>
-      <div className="text-center bg-gray-100 relative pt-3 ">
-        <div className="    bg-mprimar  justify-center  ">
+      <div className="text-center bg-gray-0 relative px-2 pt-3  ">
+        <div className="    bg-mprimar    ">
           <div className={"textwhite  font-bold text-2xl mx-auto   my-3"}>
             {title}
           </div>
-          <div className="h-5" />
-          <div className=" flex  w-screen  px-4 lg:w-[90vw] mx-auto  overflow-auto pb-2">
-            {/* <Swiper>
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-9  max-w-5xl  mx-auto mb-5">
+            {siteConfig.power.map((value, index) => (
+              <Card
+                key={value.title + value.description}
+                className="max-w-md"
+                dir="rtl"
+              >
+                <CardBody className="max-w-md" dir="rtl">
+                  <CardHeader>
+                    <h1 className={"font-semibold text-xl "}>{value.title}</h1>
+                  </CardHeader>
+                  <div
+                    key={index}
+                    className={" bg-slate-100 p-2 h-full  shadow rounded  "}
+                    dir="rtl"
+                  >
+                    {/* <div className="h-0.5 bg-mprimary " /> */}
 
-                                </Swiper> */}
+                    <p className={" text-right"} dir="rtl">
+                      {value.description}
+                    </p>
+                  </div>
+                </CardBody>
+              </Card>
+            ))}
+          </div>
+          {/* <div className="h-5" /> */}
+
+          {/* <div className="bg-red mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6  px-2 my-1">
             {siteConfig.power.map((value, index) => (
               <div
                 key={index}
                 className={
-                  " min-w-[95vw]  px-[5vw] m-[3vw] md:px-[3vw] md:mx-[1vw] md:min-w-[37vw] flex-1   shadow rounded "
+                  "  max-w-md bg-slate-200  shadow rounded "
                 }
               >
                 <h1 className={"font-semibold text-xl "}>{value.title}</h1>
-                <div className="h-0.5 bg-mprimary w-full my-2" />
+                <div className="h-0.5 bg-mprimary " />
 
                 <p className={"pb-2"}>{value.description}</p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </>
