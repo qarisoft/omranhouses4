@@ -191,8 +191,8 @@ import Image from "next/image";
 
 import { IconSvgProps } from "@/types";
 
-export const Logo: React.FC<IconSvgProps> = ({}) => (
-  <Image alt="sss" height={80} src="/logo.jpeg" width={80} />
+export const Logo: React.FC<IconSvgProps> = ({ }) => (
+  <Image alt="sss" height={80} src="./logo.jpeg" width={80} />
 );
 
 export const ThreeDots: React.FC<IconSvgProps> = ({
@@ -210,7 +210,7 @@ export const ThreeDots: React.FC<IconSvgProps> = ({
       width={size || width}
       xmlns="http://www.w3.org/2000/svg"
       stroke="currentColor"
-      // class="size-6"
+    // class="size-6"
     >
       <path
         d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"

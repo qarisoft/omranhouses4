@@ -86,13 +86,13 @@ export const Navbar = () => {
               alt="'"
               className=" top-0   left-0"
               height={80}
-              src={"/logo-small-1.png"}
+              src={"./logo-small-1.png"}
               width={80}
             />
             <Image
               alt="'"
               className="bottom-0 mt-7    left-0"
-              src={"/logo-text.png"}
+              src={"./logo-text.png"}
               width={120}
             />
             {/* <Logo /> */}
