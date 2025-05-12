@@ -1,0 +1,288 @@
+/* @import "./app.css"; */
+
+@import url('./vendors/sonchoy-icon/style.css');
+/*@import url('./vendors/bootstrap/css/bootstrap.min.css');*/
+/*@import url('./vendors/animate/animate.min.css');*/
+/*@import url('./vendors/animate/custom-animate.css');*/
+/*@import url('./vendors/fontawesome/css/all.min.css');*/
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
+@font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./fonts/Tajawal/Tajawal-Regular.ttf) ;
+}
+@font-face {
+    font-family: 'Tajawal';
+    font-weight: 300;
+    src: url(./fonts/Tajawal/Tajawal-Light.ttf) ;
+}
+@font-face {
+    font-family: 'Tajawal';
+    font-weight: 500;
+    src: url(./fonts/Tajawal/Tajawal-Medium.ttf) ;
+}
+@font-face {
+    font-family: 'Tajawal';
+    font-weight: 300;
+    src: url(./fonts/Tajawal/Tajawal-Light.ttf) ;
+}
+@font-face {
+    font-family: 'Tajawal';
+    font-weight: 700;
+    src: url(./fonts/Tajawal/Tajawal-Bold.ttf) ;
+}
+@font-face {
+    font-family: 'Tajawal';
+    font-weight: 800;
+    src: url(./fonts/Tajawal/Tajawal-ExtraBold.ttf) ;
+}
+@font-face {
+    font-family: 'Tajawal';
+    font-weight: 900;
+    src: url(./fonts/Tajawal/Tajawal-Black.ttf) ;
+}
+@font-face {
+    font-family: 'Tajawal';
+    font-weight: 200;
+    src: url(./fonts/Tajawal/Tajawal-ExtraLight.ttf) ;
+}
+.en{
+    direction: ltr;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    animation-duration: 1s;
+}
+.blur{
+    backdrop-filter: blur(100px);
+
+}
+
+
+.swiper-slide {
+    padding-bottom: 30px;
+    padding-top: 10px;
+    margin-bottom: auto;
+    margin-top: auto;
+    .intro {
+        h1, li, ul, p {
+            opacity: 0;
+        }
+    }
+}
+.swiper-slide-prev{
+    .intro {
+        h1, li, ul, p {
+            opacity: 1;
+        }
+    }
+}
+.swiper-slide-active > .intro {
+    h1, li, ul, p {
+        animation-duration: 1.5s;
+        animation-name: fInDown1;
+        animation-fill-mode: forwards;
+    }
+}
+
+.slide{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+}
+.slide-m {
+    z-index: 1;
+}
+
+.slide-m1 {
+    z-index: 2;
+    animation-duration: 2s;
+}
+
+.overlay-color {
+    z-index: 3;
+}
+
+.slide-c {
+    z-index: 4;
+}
+
+.slide-c1 {
+    z-index: 5;
+}
+
+.slide-c2 {
+    z-index: 6;
+}
+
+
+.slide-up {
+    z-index: 2;
+}
+
+.fdInDown {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-delay: .1s;
+}
+
+@keyframes fInDown1 {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -90%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+.icon {
+    font-size: 67px;
+}
+
+.flip-card {
+    perspective: 1000px;
+
+    ul {
+        text-align: justify;
+    }
+}
+
+.flip-card-inner {
+    text-align: center;
+}
+
+@media (min-width: 667px) {
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateX(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .flip-card-back {
+        margin: auto;
+        text-align: center;
+        transform: rotateX(180deg);
+    }
+
+}
+
+@media (max-width: 667px) {
+    .slide{
+        background-size: cover;
+    }
+    .flip-card-back {
+        /*opacity: 0;*/
+        /*z-index: -1;*/
+        height: 0;
+        transition-duration: .5s;
+        transform: translateY(-100%);
+        /*animation-name: zoomOut;*/
+        /*animation-duration: 1s;*/
+        /*animation-fill-mode: ;*/
+    }
+
+    .flip-card:hover .flip-card-back {
+        opacity: 1;
+        height: 100%;
+        transition: height .4s ease-in;
+
+        p {
+            animation-name: zoomIn;
+            animation-duration: 1s;
+            /*animation-delay: 1s;*/
+        }
+    }
+
+    .flip-card-front {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.opacity-11{
+    opacity: 0.06;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

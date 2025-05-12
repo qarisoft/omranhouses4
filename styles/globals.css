@@ -1,3 +1,34 @@
+@import "./app.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.animate-img.active {
+    animation: fadeInn 7s ease-in  forwards;
+}
+.bg-transparentt{
+    background-color: transparent !important;
+}
+@keyframes fadeInn {
+    0%{
+        scale:1;
+    }
+    100%{
+        scale: 1.1;
+        /* opacity: 0; */
+        /* transform: translateX(100); */
+    }
+}
+
+
+.delay-1{
+    animation-delay: 0;
+}
+.delay-2{
+    animation-delay: 0.2s;
+}
+.delay-3{
+    animation-delay: 0.4s;
+}
+.delay-4{
+    animation-delay: 1.6s;
+}

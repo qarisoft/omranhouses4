@@ -9,9 +9,14 @@ const config = {
   ],
   theme: {
     extend: {
+            colors:{
+        mprimary:'#003358',
+        yel:'#f7942e'
+      },
       fontFamily: {
-        sans: ["var(--font-sans)"],
-        mono: ["var(--font-mono)"],
+        sans: ["Tajawal"],
+        // sans: ["var(--font-sans)"],
+        // mono: ["var(--font-mono)"],
       },
     },
   },
