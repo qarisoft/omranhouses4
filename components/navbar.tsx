@@ -68,7 +68,7 @@ export const Navbar = () => {
           "data-[active=true]:after:bg-primary",
         ],
       }}
-      height={90}
+      height={80}
       isBlurred={false}
       isMenuOpen={isMenuOpen}
       maxWidth="xl"
@@ -78,10 +78,9 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink
-            className="flex justify-start items-center gap-1 bg-slate-00 h-[90px] bg-slate-50  rounded   00 relative p-1"
+            className="flex justify-start items-center gap-1 bg-slate-00 h-[80px] pe-1 bg-slate-50  rounded   "
             href="/"
           >
-            {/* <div className="absolute bottom-1 left-0 w-full h-5 bg-black opacity-50 shadow-lg"></div> */}
             <Image
               alt="'"
               className=" top-0   left-0"
@@ -95,8 +94,6 @@ export const Navbar = () => {
               src={"./logo-text.png"}
               width={120}
             />
-            {/* <Logo /> */}
-            {/* <p className="font-bold text-inherit">ACME</p> */}
           </NextLink>
         </NavbarBrand>
       </NavbarContent>

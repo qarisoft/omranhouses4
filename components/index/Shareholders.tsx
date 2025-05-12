@@ -24,7 +24,7 @@ export const Shareholders = () => {
   ];
 
   return (
-    <div className="max-w-5xl flex mx-auto bg-red-200">
+    <div className="max-w-5xl flex mx-auto">
       <Swiper
         loop
         scrollbar
