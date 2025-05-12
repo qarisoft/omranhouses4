@@ -13,27 +13,19 @@ import {
   Input,
   link as linkStyles,
 } from "@heroui/react";
-// import { Kbd } from "@heroui/kbd";
-// import { Link } from "@heroui/link";
-// import { Input } from "@heroui/input";
-// import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import React from "react";
-// import Image from "next/image";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { GithubIcon, SearchIcon } from "@/components/icons";
+
 type SerchInputProps = { searchInput: React.JSX.Element };
 
 export const Navbar = () => {
-  // const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  // const switchMenuState = () => {
-  // setIsMenuOpen((a) => !a);
-  // };
   const searchInput = (
     <Input
       aria-label="Search"
@@ -58,6 +50,7 @@ export const Navbar = () => {
   return (
     <HeroUINavbar
       isBordered
+      shouldHideOnScroll
       className="bg-[#ffffff4a]"
       classNames={{
         item: [
@@ -85,7 +78,7 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink
-            className="flex justify-start items-center gap-1 bg-slate-00 h-[90px] bg-slate-50    00 relative p-1"
+            className="flex justify-start items-center gap-1 bg-slate-00 h-[90px] bg-slate-50  rounded   00 relative p-1"
             href="/"
           >
             {/* <div className="absolute bottom-1 left-0 w-full h-5 bg-black opacity-50 shadow-lg"></div> */}

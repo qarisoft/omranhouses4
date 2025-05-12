@@ -24,6 +24,8 @@ export default function Home() {
       <Service title={"خدماتنا"} />
       <Achievements />
       <Shareholders />
+
+      <div className="h-2" />
       <Map />
     </main>
   );

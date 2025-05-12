@@ -1,11 +1,12 @@
 import { siteConfig } from "@/config/site";
+import { Image } from "@heroui/image";
 interface ServiceProps {
   title: string;
   description?: string;
   data?: string[];
   icon?: string;
 }
-export const Service = ({ title, description }: ServiceProps) => {
+export const Service = ({ title }: ServiceProps) => {
   return (
     <>
       <div
@@ -39,7 +40,7 @@ export const Service = ({ title, description }: ServiceProps) => {
   );
 };
 
-const ServiceItem = ({ title, description, data, icon }: ServiceProps) => {
+const ServiceItem = ({ title, description, icon }: ServiceProps) => {
   // @ts-ignore
   return (
     <div className="war overflow-hidden">
@@ -49,9 +50,9 @@ const ServiceItem = ({ title, description, data, icon }: ServiceProps) => {
             className="flip-card-front flex justify-center bg-white bg-cover bg-repeat-round"
             style={{ backgroundImage: "url('./image/back2.png')" }}
           >
-            <div className="m-auto p-auto flex flex-col gap-2 b">
+            <div className="m-auto p-auto flex flex-col gap-2 b justify-center items-center">
               {icon && (
-                <img alt="dsda" className={"h-28 w-28 mx-auto"} src={icon} />
+                <Image alt="dsda" className={"h-28 w-28 mx-auto"} src={icon} />
               )}
               <h1 className={"font-bold text-2xl"}>{title}</h1>
             </div>

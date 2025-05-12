@@ -24,7 +24,7 @@ export const Shareholders = () => {
   ];
 
   return (
-    <>
+    <div className="max-w-5xl flex mx-auto bg-red-200">
       <Swiper
         loop
         scrollbar
@@ -42,7 +42,7 @@ export const Shareholders = () => {
             spaceBetween: 100,
           },
         }}
-        className={" w-[90%] md:w-[80%]  m-3 px-10"}
+        className={" "}
         modules={[Autoplay, Navigation, Pagination, A11y, Scrollbar]}
         pagination={{ clickable: true }}
         onTouchEnd={(swiper) => swiper.autoplay.resume()}
@@ -56,6 +56,6 @@ export const Shareholders = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 };
