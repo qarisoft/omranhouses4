@@ -24,7 +24,7 @@ export const Shareholders = () => {
   ];
 
   return (
-    <div className="max-w-5xl flex mx-auto">
+    <div className="max-w-full lg:max-w-5xl mx-auto">
       <Swiper
         loop
         scrollbar
@@ -50,7 +50,7 @@ export const Shareholders = () => {
       >
         {data.map((item, index) => (
           <SwiperSlide key={index} className={""}>
-            <div className="w-full h-full ">
+            <div className="w-full h-full  ">
               <Image alt={"image"} src={item} />
             </div>
           </SwiperSlide>

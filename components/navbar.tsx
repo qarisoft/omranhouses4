@@ -76,9 +76,9 @@ export const Navbar = () => {
       onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
+        <NavbarBrand as="li" className="min-w-[200px] ps-0 ms-0 ">
           <NextLink
-            className="flex justify-start items-center gap-1 bg-slate-00 h-[80px] pe-1 bg-slate-50  rounded   "
+            className="flex  justify-start items-center gap-1 bg-slate-00 h-[80px] pe-1 bg-slate-50  rounded   "
             href="/"
           >
             <Image
@@ -101,11 +101,12 @@ export const Navbar = () => {
       <NavItemsContent />
 
       <NavbarContent />
+
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
+        {/* <Link isExternal aria-label="Github" href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
-        </Link>
-        <ThemeSwitch />
+        </Link> */}
+        {/* <ThemeSwitch /> */}
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         />
@@ -152,7 +153,7 @@ function NavItemsContent() {
 
   return (
     <NavbarContent>
-      <ul className="hidden lg:flex gap-4 justify-start ml-2">
+      <ul className="hidden md:flex gap-4 justify-start ml-2">
         {siteConfig.navItems.map((item) => (
           <NavbarItem key={item.href} isActive={pathname == item.href}>
             <NextLink
