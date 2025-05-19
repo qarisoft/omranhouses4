@@ -8,7 +8,6 @@ import { AboutSection as About } from "@/components/index/ab-section";
 import { Power } from "@/components/index/Power";
 import { Service } from "@/components/index/Service";
 import { Achievements } from "@/components/index/Achements";
-import { Shareholders } from "@/components/index/Shareholders";
 import { Map } from "@/components/Map";
 import { Image } from "@heroui/image";
 

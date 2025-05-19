@@ -51,7 +51,7 @@ export const Navbar = () => {
     <HeroUINavbar
       isBordered
       shouldHideOnScroll
-      className="bg-[#ffffff4a]"
+      className="bg-transparent z-30"
       classNames={{
         item: [
           "flex",
@@ -68,7 +68,7 @@ export const Navbar = () => {
           "data-[active=true]:after:bg-primary",
         ],
       }}
-      height={80}
+      height={120}
       isBlurred={false}
       isMenuOpen={isMenuOpen}
       maxWidth="xl"
@@ -78,21 +78,21 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="min-w-[200px] ps-0 ms-0 ">
           <NextLink
-            className="flex  justify-start items-center gap-1 bg-slate-00 h-[80px] pe-1 bg-slate-50  rounded   "
+            className="absolute z-30  flex  justify-start items-center gap-1   pe-1   rounded   "
             href="/"
           >
             <Image
               alt="'"
               className=" top-0   left-0"
-              height={80}
+              height={120}
               src={"./logo-small-1.png"}
-              width={80}
+              width={120}
             />
             <Image
               alt="'"
-              className="bottom-0 mt-7    left-0"
+              className="bottom-0 mt-14    left-0"
               src={"./logo-text.png"}
-              width={120}
+              width={160}
             />
           </NextLink>
         </NavbarBrand>
@@ -158,10 +158,11 @@ function NavItemsContent() {
           <NavbarItem key={item.href} isActive={pathname == item.href}>
             <NextLink
               className={clsx(
-                linkStyles({ color: "foreground" }),
-                "data-[active=true]:text-primary data-[active=true]:font-medium",
+
+                " text-xl mb-1 data-[active=true]:text-primary data-[active=true]:font-medium hover:-translate-y-1 duration-200",
+                pathname == '/' ? 'text-white' : ''
               )}
-              color="foreground"
+              // color="white"
               href={item.href}
             >
               {item.label}
