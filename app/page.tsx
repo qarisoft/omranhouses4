@@ -23,7 +23,7 @@ export default function Home() {
       <Power title={"لماذا القوة العقارية ؟"} />
       <Service title={"خدماتنا"} />
       <Achievements />
-      <Shareholders />
+      {/* <Shareholders /> */}
 
       <div className="h-2" />
       <Map />
@@ -35,15 +35,7 @@ function HeroSection() {
   const [activeIndex, setActive] = useState<number>(0);
   const active = data[activeIndex];
 
-  // useEffect(() => {
-  //   const timeOut = setTimeout(() => {
-  //     setActive((a) => (a < data.length - 1 ? a + 1 : 0));
-  //   }, 7000);
 
-  //   return () => {
-  //     clearInterval(timeOut);
-  //   };
-  // });
 
   function getIndx(params: number) {
     if (params == activeIndex) {
