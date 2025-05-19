@@ -32,8 +32,6 @@ export const Power = ({ title, description, data }: PowerProps) => {
                       className={" bg-slate-100 p-2 h-full  shadow rounded  "}
                       dir="rtl"
                     >
-                      {/* <div className="h-0.5 bg-mprimary " /> */}
-
                       <p className={" text-right"} dir="rtl">
                         {value.description}
                       </p>
@@ -59,7 +57,6 @@ const PowerItem = ({ title, description, data }: PowerProps) => {
         <div className=" ">
           <div className=" flex justify-center bg-white">
             <div className="m-auto">
-              {/*<span className="icon icon-healthcare font-medium"></span>*/}
               <h1 className={"font-bold text-2xl"}>{title}</h1>
             </div>
           </div>

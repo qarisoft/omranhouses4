@@ -40,3 +40,17 @@
   height: 20px;
   background-color: blue;
 }
+
+
+
+.hero-title{
+    /* font-size: 72px; */
+  /* background: -webkit-linear-gradient(#27377d); */
+  background-clip: text;
+  color: #27377d;
+  /* -webkit-text-fill-color: transparent; */
+  font-weight: bolder;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  /* text-shadow: 4px 4px 6px #b4b4b4; */
+
+}
