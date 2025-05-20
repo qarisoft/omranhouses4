@@ -49,9 +49,9 @@ export const Navbar = () => {
 
   return (
     <HeroUINavbar
-      isBordered
+      // isBordered
       shouldHideOnScroll
-      className="bg-transparent z-30"
+      className="bg-transparent z-50"
       classNames={{
         item: [
           "flex",

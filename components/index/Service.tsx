@@ -1,5 +1,6 @@
 import { siteConfig } from "@/config/site";
 import { Image } from "@heroui/image";
+import { Power } from "./Power";
 interface ServiceProps {
   title: string;
   description?: string;
@@ -10,13 +11,19 @@ export const Service = ({ title }: ServiceProps) => {
   return (
     <>
       <div
-        className="bg-amber-30 text-center  w-full p-6 relative"
+        className=" text-center  w-full p-6 relative"
         style={{
           backgroundImage: `url('./image/11.jpg')`,
           backgroundAttachment: "fixed",
         }}
       >
+
+
+
         <span className="bg-mprimary w-full h-full absolute top-0 left-0 z-0 opacity-75" />
+
+        {/* <Power title={"لماذا القوة العقارية ؟"} /> */}
+        {/*  */}
         <div className="">
           <div className={"text-white  font-bold text-2xl m-3 relative z-20"}>
             {title}

@@ -139,12 +139,12 @@ export default function RootLayout({
               </div>
             </footer>
           </div>
-          <Link
+          {/* <Link
             className="fixed bg- text-center flex justify-center  bottom-0 z-10  h-12 w-12 rounded-full m-3"
             href={"https://wa.me/966533307024"}
           >
             <WhatsAppIcon size={50} />
-          </Link>
+          </Link> */}
         </Providers>
       </body>
     </html>

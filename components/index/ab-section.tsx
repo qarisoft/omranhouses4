@@ -12,12 +12,13 @@ export const AboutSection = () => {
       className="pe-2 min-h-[40vh] relative  w-screen overflow-hidden animate__animated animate__fadeInRight"
       style={{
         backgroundImage: "url('./image/11.jpg')",
-        backgroundRepeat: "no-repeat",
+        // backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        backgroundPosition: 'center',
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="absolute h-full w-full bg-mprimary opacity-75" />
+      <div className="absolute bg-mprimary h-full w-full  opacity-75" />
       <h1
         className={
           "relative z-10 text-center font-semibold py-3 text-xl text-white border-b-1 mx-4"

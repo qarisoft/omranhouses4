@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { data, type PageItem } from "../config/data";
 
@@ -10,14 +10,92 @@ import { Service } from "@/components/index/Service";
 import { Achievements } from "@/components/index/Achements";
 import { Map } from "@/components/Map";
 import { Image } from "@heroui/image";
-
+import { motion, useScroll } from "framer-motion"
 import "../styles/animate.css";
 import { useIsMobile } from "@/config/use-mobile";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+import { CustomEase, CustomBounce, Observer } from "gsap/all";
+import { Button } from "@heroui/button";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 export default function Home() {
+
+  const a = useRef(null)
+
+  useGSAP(() => {
+
+    const tween = gsap.fromTo('.hero', { scale: 1.3 }, {
+      ease: "expoScale(0.5,7,none)",
+
+      scale: 1,
+      duration: 7,
+      scrollTrigger: {
+        toggleActions: 'play pause resume reverse'
+      }
+    })
+    Observer.create({
+      target: '.overlay',
+
+      onHover: () => {
+        console.log('hover');
+        tween.reverse().then((aa) => {
+          aa.restart()
+        })
+
+      },
+      onHoverEnd: () => {
+        tween.play()
+        console.log('hover end');
+      }
+    })
+
+  })
+  return (
+    <div className="">
+
+      <div className="absolute top-0 left-0 w-screen h-screen overflow-clip">
+
+        <Image className="hidden md:block w-screen h-screen hero" radius="none" src="./bg.png" />
+        <Image className="md:hidden w-screen h-screen       hero" radius="none" src="./bg.m.png" />
+        <div className=" absolute top-0 left-0 w-screen h-screen bg-black opacity-40 z-10 flex flex-col justify-center items-cente" />
+
+        <div className="overlay hidden  absolute top-0 left-0 w-screen h-screen z-30 md:flex flex-col justify-center p-4  text-white">
+          <div className="h-10"></div>
+          <div className="text-5xl font-bold text-[#27377d] hero-title">منازل العمران </div>
+          <div className="h-10"></div>
+          <Button className="w-fit px-6 bg-[#f7942e]">مشاريعنا</Button>
+        </div>
+
+        <div className="md:hidden  absolute top-0 left-0 w-screen h-screen z-30 flex flex-col justify-center p-4  text-white">
+          <div className="h-10"></div>
+          <div className="text-5xl font-bold text-[#27377d] hero-title">منازل العمران </div>
+          <div className="h-10"></div>
+          <Button className="w-fit px-6 bg-[#f7942e]">مشاريعنا</Button>
+        </div>
+      </div>
+      <div className="h-[calc(100vh-120px)]"></div>
+
+
+
+      <About />
+      <Power title={"لماذا القوة العقارية ؟"} />
+      <Service title={"خدماتنا"} />
+      <Achievements />
+
+      <div className="h-2" />
+      <Map />
+    </div >
+  );
+}
+
+function A() {
   return (
     <main className="flex flex-col">
-      <section className="h-[calc(100vh-90px)] w-full flex flex-col ">
-        <HeroSection />
+      <div className="h-[calc(100vh-120px)]"></div>
+      <section className="absolute top-0 left-0 h-screen w-full flex flex-col bg-slate-400">
+        <Hero />
       </section>
       <About />
       <Power title={"لماذا القوة العقارية ؟"} />
@@ -27,7 +105,44 @@ export default function Home() {
       <div className="h-2" />
       <Map />
     </main>
-  );
+  )
+}
+const Hero = () => {
+
+  // const { scrollYProgress, scrollY } = useScroll()
+  // console.log();
+
+  useGSAP(() => {
+
+    gsap.to('.hero-img', {
+      scale: 1.1,
+      ease: "power2.out",
+
+      scrollTrigger: {
+        trigger: '.hero-img',
+        toggleActions: 'restart puse resume puse',
+        markers: true
+      }
+      //   start: 100,
+      //   // end: 300,
+      //   // scrub: true
+      //   // start: 'top bottom',
+      //   // end: 'center center',
+      //   // scrub: true
+      // }
+      // ease: CustomEase.create("custom", "M0,0,C0.126,0.382,0.282,0.674,0.44,0.822,0.632,1.002,0.818,1.001,1,1"),
+    })
+
+  })
+
+  return (
+    <div className="w-screen h-screen overflow-clip">
+      <Image src="./bg.png" className="hidden md:block w-screen h-screen hero-img" />
+      <Image src="./bg.m.png" className="md:hidden w-screen h-screen     hero-img" />
+      {/* {scrollY.get()} */}
+
+    </div>
+  )
 }
 
 function HeroSection() {

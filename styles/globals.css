@@ -44,13 +44,39 @@
 
 
 .hero-title{
+  --c:rgba(255, 255, 255, 0.466);
     /* font-size: 72px; */
   /* background: -webkit-linear-gradient(#27377d); */
-  background-clip: text;
-  color: #27377d;
+  /* background-clip: text; */
+  /* color: #27377d; */
   /* -webkit-text-fill-color: transparent; */
-  font-weight: bolder;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  /* font-weight: bolder; */
+  text-shadow: -1px 0 var(--c), 0 1px var(--c), 1px 0 var(--c), 0 -1px var(--c);
   /* text-shadow: 4px 4px 6px #b4b4b4; */
 
+}
+.hero-img{
+
+  animation: Hero 4s ease-out  forwards;
+}
+.hero-img:hover{
+  
+  animation: Hero 4s ease-out  forwards;
+  /* transform: scale(2); */
+  /* transition: ; */
+  /* translate: ; */
+  /* transition-duration: 4s; */
+  /* transition-property: all; */
+  /* transition-behavior: ; */
+  /* animation-iteration-count: ; */
+}
+
+
+@keyframes Hero {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.1;
+  }
 }
