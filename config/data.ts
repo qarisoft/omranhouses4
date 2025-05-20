@@ -5,6 +5,7 @@ export interface PageItem {
   mobileImgUrl: string;
   title: string;
   address: string;
+  videoUrl?: string;
 }
 export type PageItemWithPhotos = PageItem & { images: string[] };
 export const data: PageItem[] = [
@@ -69,7 +70,7 @@ const morowaPhotos = [
   "morowa/in/DSC03455-HDR.jpg",
 ];
 const alnakheelPhotos = [
-  "DSC02840-HDR.jpg",
+  // "DSC02840-HDR.jpg",
   "alnakheel/in/DSC02845-HDR.jpg",
   "alnakheel/in/DSC02850-HDR.jpg",
   "alnakheel/in/DSC02855-HDR.jpg",
@@ -125,6 +126,33 @@ const _103 = [
   "103/in/DSC07380-HDR.jpg",
   "103/in/DSC07305-HDR-1.jpg",
 ];
+const _105 = [
+  "./105/in/DSC04983-HDR.jpg",
+  "./105/in/DSC04986-HDR.jpg",
+  "./105/in/DSC04989-HDR.jpg",
+  "./105/in/DSC04995-HDR.jpg",
+  "./105/in/DSC04998-HDR.jpg",
+  "./105/in/DSC05016-HDR.jpg",
+  "./105/in/DSC05019-HDR.jpg",
+  "./105/in/DSC05022-HDR.jpg",
+  "./105/in/DSC05025-HDR.jpg",
+  "./105/in/DSC05031-HDR.jpg",
+  "./105/in/DSC05040-HDR.jpg",
+  "./105/in/DSC05043-HDR.jpg",
+  "./105/in/DSC05046-HDR.jpg",
+  "./105/in/DSC05049-HDR.jpg",
+  "./105/in/DSC05052-HDR.jpg",
+  "./105/in/DSC05058-HDR.jpg",
+  "./105/in/DSC05070-HDR.jpg",
+  "./105/in/DSC05079-HDR.jpg",
+  "./105/in/DSC05082-HDR.jpg",
+  "./105/in/DSC05085-HDR.jpg",
+  "./105/in/DSC05088-HDR.jpg",
+  "./105/in/DSC05091-HDR.jpg",
+  "./105/in/DSC05094-HDR.jpg",
+  "./105/in/DSC05097-HDR.jpg",
+  "./105/in/DSC05100-HDR.jpg",
+];
 
 export const data2: PageItemWithPhotos[] = [
   {
@@ -134,6 +162,7 @@ export const data2: PageItemWithPhotos[] = [
     mobileImgUrl: "./alnakheel/out/1.jpg",
     title: "مشروع منازل 102",
     address: "حي النخيل",
+    videoUrl: "./alnakheel/102.mp4",
     images: alnakheelPhotos,
   },
   {
@@ -145,22 +174,25 @@ export const data2: PageItemWithPhotos[] = [
     address: "حي المروة",
     images: morowaPhotos,
   },
-  // {
-  //   className: "",
-  //   index: 2,
-  //   imgUrl: "./morowa/out/2.jpg",
-  //   mobileImgUrl: "./morowa/out/2.m.jpg",
-  //   title: "مشروع منازل المروة",
-  //   address: "حي المروة",
-  //   images: morowaPhotos,
-  // },
+
   {
     className: "",
-    index: 3,
+    index: 2,
     imgUrl: "./103/out/2.jpg",
+    videoUrl: "./103/103.mp4",
     mobileImgUrl: "./103/out/2.jpg",
     title: "مشروع منازل 103",
     address: "حي الربوه",
     images: _103,
+  },
+  {
+    className: "",
+    index: 3,
+    imgUrl: "./105/out/1.jpg",
+    videoUrl: "./105/105.mp4",
+    mobileImgUrl: "./105/out/1.jpg",
+    title: "مشروع منازل 105",
+    address: "حي الربوه",
+    images: _105,
   },
 ];

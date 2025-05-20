@@ -62,17 +62,23 @@ export default function Home() {
         <div className=" absolute top-0 left-0 w-screen h-screen bg-black opacity-40 z-10 flex flex-col justify-center items-cente" />
 
         <div className="overlay hidden  absolute top-0 left-0 w-screen h-screen z-30 md:flex flex-col justify-center p-4  text-white">
-          <div className="h-10"></div>
-          <div className="text-5xl font-bold text-[#27377d] hero-title">منازل العمران </div>
-          <div className="h-10"></div>
-          <Button className="w-fit px-6 bg-[#f7942e]">مشاريعنا</Button>
+          <div className="max-w-7xl w-full  mx-auto">
+
+            <div className="h-10"></div>
+            <div className="text-5xl md:text-7xl font-bold text-[#27377d] hero-title">منازل العمران </div>
+            <div className="h-10"></div>
+            <Button className="w-fit px-6 bg-[#f7942e]">مشاريعنا</Button>
+          </div>
         </div>
 
         <div className="md:hidden  absolute top-0 left-0 w-screen h-screen z-30 flex flex-col justify-center p-4  text-white">
-          <div className="h-10"></div>
-          <div className="text-5xl font-bold text-[#27377d] hero-title">منازل العمران </div>
-          <div className="h-10"></div>
-          <Button className="w-fit px-6 bg-[#f7942e]">مشاريعنا</Button>
+          <div className="max-w-4xl  mx-auto">
+
+            <div className="h-10"></div>
+            <div className="text-5xl md:text-7xl font-bold text-[#27377d] hero-title">منازل العمران </div>
+            <div className="h-10"></div>
+            <Button className="w-fit px-6 bg-[#f7942e]">مشاريعنا</Button>
+          </div>
         </div>
       </div>
       <div className="h-[calc(100vh-120px)]"></div>

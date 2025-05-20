@@ -48,14 +48,22 @@ function AppCard({ item }: { item: PageItemWithPhotos }) {
           onClick={onOpen}
         />
         <Drawer isOpen={isOpen} onOpenChange={onOpenChange}>
-          <DrawerContent className="max-w-[90vw]  md:max-w-3xl">
+          <DrawerContent className="max-w-[90vw]  md:max-w-[45rem]">
             {(onClose) => (
               <>
                 <DrawerHeader className="flex flex-col gap-1">
                   {item.title}
                 </DrawerHeader>
                 <DrawerBody>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {item.videoUrl && (
+                    <div className="  flex justify-center ">
+                      <video autoPlay className="w-full" controls >
+                        <source src={item.videoUrl} type="video/mp4" />
+
+                      </video>
+                    </div>
+                  )}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3     ">
                     {item.images.map((img1) => (
                       <Image
                         key={img1}
