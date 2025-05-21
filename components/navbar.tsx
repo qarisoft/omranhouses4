@@ -106,6 +106,7 @@ export const Navbar = () => {
         </Link> */}
         {/* <ThemeSwitch /> */}
         <NavbarMenuToggle
+          className={"text-white"}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         />
       </NavbarContent>

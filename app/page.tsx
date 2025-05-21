@@ -67,10 +67,16 @@ export default function Home() {
           src="./back.jpg"
         />
         <Image
-          className="md:hidden w-screen h-full       hero"
+          className="md:hidden w-screen h-[calc(100dvh-120px)] hero"
           radius="none"
-          src="./bg.m.png"
+          src="./back.m.jpg"
         />
+        {/*<div*/}
+        {/*  className="md:hidden w-screen h-full bg-no-repeat bg-cover bg-center       "*/}
+        {/*  style={{ backgroundImage: `url(./back.jpg)` }}*/}
+        {/*  // radius="none"*/}
+        {/*  // src="./bg.m.png"*/}
+        {/*/>*/}
         <div className=" absolute top-0 left-0 w-screen h-screen bg-black opacity-40 z-10 flex flex-col justify-center items-cente" />
 
         <div className="overlay hidden  absolute top-0 left-0 w-screen h-screen z-30 md:flex flex-col justify-center p-4  text-white">

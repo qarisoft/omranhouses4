@@ -1,7 +1,7 @@
 import { Card, CardBody, CardHeader } from "@heroui/react";
+import { motion } from "framer-motion";
 
 import { siteConfig } from "@/config/site";
-import { motion } from "framer-motion";
 
 interface PowerProps {
   title: string;
@@ -12,20 +12,37 @@ interface PowerProps {
 export const Power = ({ title }: PowerProps) => {
   return (
     <>
-      <div className="text-center bg-gray-0 relative px-2 pt-3  ">
+      <motion.div
+        className="text-center bg-gray-0 relative px-2 pt-3  "
+        initial="hidden"
+        variants={{
+          visible: { transition: { staggerChildren: 0.15, ease: "easeOut" } },
+          hidden: {
+            transition: { staggerChildren: 0.15, staggerDirection: -1 },
+          },
+        }}
+        viewport={{ amount: 0.7 }}
+        whileInView="visible"
+      >
         <div className="       ">
-          <div className={"textwhite  font-bold text-2xl mx-auto   my-3"}>
+          <motion.div
+            className={"textwhite  font-bold text-2xl mx-auto   my-3"}
+            variants={{
+              visible: { opacity: [0.1, 0.2, 0.5, 0.9, 1], x: 0 },
+              hidden: { opacity: 0, x: 100 },
+            }}
+          >
             {title}
-          </div>
+          </motion.div>
           <div className="  gap-9  max-w-5xl  mx-auto mb-5">
             <div className="flex overflow-auto">
               {siteConfig.power.map((value, index) => (
                 <motion.div
+                  key={value.title + value.description}
                   variants={{
-                    visible: { opacity: 1, x: 0 },
+                    visible: { opacity: [0.1, 0.2, 0.5, 0.9, 1], x: 0 },
                     hidden: { opacity: 0, x: 100 },
                   }}
-                  key={value.title + value.description}
                 >
                   <Card className="w-[30rem] flex-shrink-0  m-2" dir="rtl">
                     <CardBody className=" " dir="rtl">
@@ -50,7 +67,7 @@ export const Power = ({ title }: PowerProps) => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
