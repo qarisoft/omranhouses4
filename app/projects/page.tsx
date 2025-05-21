@@ -12,8 +12,8 @@ import {
   Image,
   useDisclosure,
 } from "@heroui/react";
-
 // import Image from "next/image";
+import "../../styles/animate.css";
 import { Achievements } from "@/components/index/Achements";
 import { data2, PageItemWithPhotos } from "@/config/data";
 
@@ -23,19 +23,22 @@ export default function BlogPage() {
       <Achievements />
       <div className="h-5" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
-        {data2.map((itm) => (
-          <AppCard key={itm.index} item={itm} />
+        {data2.map((itm, index) => (
+          <AppCard key={itm.index} item={itm} index={index} />
         ))}
       </div>
     </div>
   );
 }
 
-function AppCard({ item }: { item: PageItemWithPhotos }) {
+function AppCard({ item, index }: { item: PageItemWithPhotos; index: number }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <Card className=" py-4">
+    <Card
+      className=" py-4  animate__animated animate__fadeInRight "
+      style={{ animationDelay: `${index * 0.6}s` }}
+    >
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
         <small className="text-default-500">{item.address}</small>
         <h4 className="font-bold text-large">{item.title}</h4>

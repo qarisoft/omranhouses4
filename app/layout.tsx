@@ -2,8 +2,7 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 import { Image } from "@heroui/image";
-import { Link } from "@heroui/react";
-
+// import { Link } from "@heroui/react";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
@@ -47,20 +46,8 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="">
             <Navbar />
-            {/* <main className=""> */}
             {children}
-            {/* </main> */}
-            {/* <footer className="w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://heroui.com?utm_source=next-app-template"
-                title="heroui.com homepage"
-              >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">HeroUI</p>
-              </Link>
-            </footer> */}
+
             <footer className={"flex-1 pt-5 border-t "}>
               <div className="md:flex justify-between md:max-w-5xl mx-auto pb-3 gap-3">
                 <div className=" md:flex flex-col   text-center md:text-start gap-1 text-large">
@@ -138,12 +125,12 @@ export default function RootLayout({
               </div>
             </footer>
           </div>
-          <Link
-            className="fixed bg- text-center flex justify-center  bottom-0 z-10  h-12 w-12 rounded-full m-3"
+          <a
+            className="fixed bg- text-center flex justify-center  bottom-1  right-1 md:right-10 md:bottom-10 z-10  h-12 w-12 rounded-full m-3"
             href={"https://wa.me/966533307024"}
           >
             <WhatsAppIcon size={50} />
-          </Link>
+          </a>
         </Providers>
       </body>
     </html>

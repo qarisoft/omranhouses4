@@ -7,6 +7,7 @@ export interface PageItem {
   address: string;
   videoUrl?: string;
 }
+
 export type PageItemWithPhotos = PageItem & { images: string[] };
 export const data: PageItem[] = [
   {
@@ -162,7 +163,7 @@ export const data2: PageItemWithPhotos[] = [
     mobileImgUrl: "./alnakheel/out/1.jpg",
     title: "مشروع منازل 102",
     address: "حي النخيل",
-    videoUrl: "./alnakheel/102.mp4",
+    videoUrl: "./alnakheel/102.1.mp4",
     images: alnakheelPhotos,
   },
   {
@@ -179,7 +180,7 @@ export const data2: PageItemWithPhotos[] = [
     className: "",
     index: 2,
     imgUrl: "./103/out/2.jpg",
-    videoUrl: "./103/103.mp4",
+    videoUrl: "./103/103.1.mp4",
     mobileImgUrl: "./103/out/2.jpg",
     title: "مشروع منازل 103",
     address: "حي الربوه",
@@ -189,7 +190,7 @@ export const data2: PageItemWithPhotos[] = [
     className: "",
     index: 3,
     imgUrl: "./105/out/1.jpg",
-    videoUrl: "./105/105.mp4",
+    videoUrl: "./105/105.1.mp4",
     mobileImgUrl: "./105/out/1.jpg",
     title: "مشروع منازل 105",
     address: "حي الربوه",

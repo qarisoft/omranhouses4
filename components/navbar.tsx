@@ -76,19 +76,19 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="min-w-[200px] ps-0 ms-0 ">
           <NextLink
-            className="absolute z-30  flex  justify-start items-center gap-1   pe-1   rounded   "
+            className="absolute z-30  flex   justify-start items-center gap-1   pe-1     "
             href="/"
           >
             <Image
               alt="'"
-              className=" top-0   left-0"
-              height={120}
+              className=" top-0 mb-[2px]   left-0 h-[90px] md:h-[120px]"
+              // height={120}
               src={"./logo-gold.png"}
-              width={120}
+              // width={120}
             />
             <Image
               alt="'"
-              className="bottom-0 mt-14    left-0"
+              className="bottom-0 mt-14    left-0 w-[110px] md:w-[160px]"
               src={"./logo-text.png"}
               width={160}
             />
