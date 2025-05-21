@@ -163,7 +163,7 @@ export const data2: PageItemWithPhotos[] = [
     mobileImgUrl: "./alnakheel/out/1.jpg",
     title: "مشروع منازل 102",
     address: "حي النخيل",
-    videoUrl: "./alnakheel/102.1.mp4",
+    videoUrl: "./alnakheel/102.mp4",
     images: alnakheelPhotos,
   },
   {
@@ -190,7 +190,7 @@ export const data2: PageItemWithPhotos[] = [
     className: "",
     index: 3,
     imgUrl: "./105/out/1.jpg",
-    videoUrl: "./105/105.1.mp4",
+    videoUrl: "./105/105.mp4",
     mobileImgUrl: "./105/out/1.jpg",
     title: "مشروع منازل 105",
     address: "حي الربوه",

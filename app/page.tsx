@@ -17,6 +17,7 @@ import { Achievements } from "@/components/index/Achements";
 import { Map } from "@/components/Map";
 
 import "../styles/animate.css";
+import { Link } from "@heroui/react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 export default function Home() {
@@ -78,7 +79,9 @@ export default function Home() {
               منازل العمران
             </div>
             <div className="h-10" />
-            <Button className="w-fit px-6 bg-[#f7942e]">مشاريعنا</Button>
+            <Link href="/projects">
+              <Button className="w-fit px-6 bg-[#f7942e]">مشاريعنا</Button>
+            </Link>
           </div>
         </div>
 
@@ -89,7 +92,9 @@ export default function Home() {
               منازل العمران
             </div>
             <div className="h-10" />
-            <Button className="w-fit px-6 bg-[#f7942e]">مشاريعنا</Button>
+            <Link href="/projects">
+              <Button className="w-fit px-6 bg-[#f7942e]">مشاريعنا</Button>
+            </Link>
           </div>
         </div>
       </div>

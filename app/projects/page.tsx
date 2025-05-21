@@ -63,7 +63,7 @@ function AppCard({ item, index }: { item: PageItemWithPhotos; index: number }) {
                 <DrawerBody>
                   {item.videoUrl && (
                     <div className="  flex justify-center ">
-                      <video autoPlay controls className="w-full">
+                      <video controls className="w-full">
                         <track default kind="captions" src="SUBTITLE_PATH" />
                         <source src={item.videoUrl} type="video/mp4" />
                       </video>
