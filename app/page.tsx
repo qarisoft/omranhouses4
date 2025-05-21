@@ -9,6 +9,7 @@ import { useGSAP } from "@gsap/react";
 import { Observer } from "gsap/all";
 import { Button } from "@heroui/button";
 import gsap from "gsap";
+import { Link } from "@heroui/react";
 
 import { AboutSection as About } from "@/components/index/ab-section";
 import { Power } from "@/components/index/Power";
@@ -17,7 +18,6 @@ import { Achievements } from "@/components/index/Achements";
 import { Map } from "@/components/Map";
 
 import "../styles/animate.css";
-import { Link } from "@heroui/react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 export default function Home() {
@@ -101,12 +101,62 @@ export default function Home() {
       {/*<div className="h-[calc(100vh-120px)]" />*/}
 
       <About />
+      <Samantha />
       <Power title={"لماذا القوة العقارية ؟"} />
       <Service title={"خدماتنا"} />
+      <div className="h-10" />
       <Achievements />
 
-      <div className="h-2" />
+      <div className="h-10" />
       <Map />
+      <div className="h-10" />
     </div>
   );
 }
+
+const Samantha = () => {
+  const data = [
+    {
+      des: "اتحاد ملاك",
+      id: 0,
+      text: "1 سنة واحدة",
+      icon: "./icons/tham/3.svg",
+    },
+    {
+      des: "سباكة وكهرباء",
+      id: 1,
+      text: "5 سنوات",
+      icon: "./icons/tham/4.svg",
+    },
+    { des: "هياكل وبناء", id: 2, text: "15 سنة", icon: "./icons/tham/1.svg" },
+    { des: "قواطع وافياش", id: 3, text: "25 سنة", icon: "./icons/tham/2.svg" },
+  ];
+
+  return (
+    <div className={"flex my-12 p-2"}>
+      <div className="flex-1 max-w-5xl mx-auto bg-gray500">
+        <div className="relative w-fit">
+          <h1 className={"text-4xl md:text-5xl font-bold  w-fit"}>الضمانات</h1>
+          <div className="absolute -bottom-2 w-full h-[4px] bg-mprimary" />
+        </div>
+        <div className="h-5" />
+
+        <div className="borde p-3 flex  gap-5 flex-col md:flex-row  justify-between">
+          {data.map((a, i) => (
+            <div
+              key={a.id}
+              className="border rounded-lg p-4 px-6 shadow-md drop-shadow text-center w-fit mx-auto animate__animated animate__fadeInRight "
+              style={{ animationDelay: `${i * 0.4}s` }}
+            >
+              <Image className="size-40 mx-auto" src={a.icon} />
+              <div className="text-center text-2xl font-bold text-mprimary">
+                {a.des}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="h-10" />
+      </div>
+    </div>
+  );
+};
