@@ -51,13 +51,13 @@ export default function RootLayout({
             <footer className={"flex-1 pt-5 border-t "}>
               <div className="md:flex justify-between md:max-w-5xl mx-auto pb-3 gap-3">
                 <div className=" md:flex flex-col   text-center md:text-start gap-1 text-large">
-                  <div className="font-medium">الرئيسية</div>
-                  <div className="font-medium">عن الشركة</div>
-                  <div className="font-medium">مشاريعنا</div>
-                  <div className="font-medium">خدماتنا</div>
-                  <div className="font-medium">اتصل بنا</div>
-                  <div className="font-medium">المساعدة</div>
-                  <div className="font-medium">سياسة الخصوصية</div>
+                  {/*<div className="font-medium">الرئيسية</div>*/}
+                  {/*<div className="font-medium">عن الشركة</div>*/}
+                  {/*<div className="font-medium">مشاريعنا</div>*/}
+                  {/*<div className="font-medium">خدماتنا</div>*/}
+                  {/*<div className="font-medium">اتصل بنا</div>*/}
+                  {/*<div className="font-medium">المساعدة</div>*/}
+                  {/*<div className="font-medium">سياسة الخصوصية</div>*/}
                 </div>
 
                 <div className="b  flex flex-col justify-center gap-4 p-2 md:px-10 mt-3">

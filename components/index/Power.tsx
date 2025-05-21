@@ -1,6 +1,7 @@
 import { Card, CardBody, CardHeader } from "@heroui/react";
 
 import { siteConfig } from "@/config/site";
+import { motion } from "framer-motion";
 
 interface PowerProps {
   title: string;
@@ -19,28 +20,32 @@ export const Power = ({ title }: PowerProps) => {
           <div className="  gap-9  max-w-5xl  mx-auto mb-5">
             <div className="flex overflow-auto">
               {siteConfig.power.map((value, index) => (
-                <Card
+                <motion.div
+                  variants={{
+                    visible: { opacity: 1, x: 0 },
+                    hidden: { opacity: 0, x: 100 },
+                  }}
                   key={value.title + value.description}
-                  className="w-[30rem] flex-shrink-0  m-2"
-                  dir="rtl"
                 >
-                  <CardBody className=" " dir="rtl">
-                    <CardHeader>
-                      <h1 className={"font-semibold text-xl "}>
-                        {value.title}
-                      </h1>
-                    </CardHeader>
-                    <div
-                      key={index}
-                      className={" bg-slate-100 p-2 h-full  shadow rounded  "}
-                      dir="rtl"
-                    >
-                      <p className={" text-right"} dir="rtl">
-                        {value.description}
-                      </p>
-                    </div>
-                  </CardBody>
-                </Card>
+                  <Card className="w-[30rem] flex-shrink-0  m-2" dir="rtl">
+                    <CardBody className=" " dir="rtl">
+                      <CardHeader>
+                        <h1 className={"font-semibold text-xl "}>
+                          {value.title}
+                        </h1>
+                      </CardHeader>
+                      <div
+                        key={index}
+                        className={" bg-slate-100 p-2 h-full  shadow rounded  "}
+                        dir="rtl"
+                      >
+                        <p className={" text-right"} dir="rtl">
+                          {value.description}
+                        </p>
+                      </div>
+                    </CardBody>
+                  </Card>
+                </motion.div>
               ))}
             </div>
           </div>

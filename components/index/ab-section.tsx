@@ -9,7 +9,7 @@ import { Intro } from "@/components/index/Intro";
 export const AboutSection = () => {
   return (
     <div
-      className="pe-2 min-h-[40vh] relative  w-screen overflow-hidden animate__animated animate__fadeInDown"
+      className="pe-2 min-h-[40vh] relative  w-screen overflow-hidden"
       style={{
         backgroundImage: "url('./image/11.jpg')",
         // backgroundRepeat: "no-repeat",

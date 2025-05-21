@@ -1,6 +1,7 @@
 import { Image } from "@heroui/image";
 
 import { siteConfig } from "@/config/site";
+import { motion } from "framer-motion";
 
 interface ServiceProps {
   title: string;
@@ -12,7 +13,7 @@ interface ServiceProps {
 export const Service = ({ title }: ServiceProps) => {
   return (
     <>
-      <div
+      <motion.div
         className=" text-center  w-full p-6 relative"
         style={{
           backgroundImage: `url('./image/11.jpg')`,
@@ -39,7 +40,7 @@ export const Service = ({ title }: ServiceProps) => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

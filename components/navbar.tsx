@@ -89,7 +89,7 @@ export const Navbar = () => {
             <Image
               alt="'"
               className="bottom-0 mt-14    left-0 w-[110px] md:w-[160px]"
-              src={"./logo-text.png"}
+              src={"./logo-sm-gold.png"}
               width={160}
             />
           </NextLink>

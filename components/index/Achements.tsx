@@ -1,8 +1,20 @@
+import { motion } from "framer-motion";
 import { PropsWithChildren } from "react";
 
 export const Achievements = () => {
   return (
-    <div className="flex justify-center">
+    <motion.div
+      className="flex justify-center"
+      initial="hidden"
+      variants={{
+        visible: { transition: { staggerChildren: 0.15, ease: "easeOut" } },
+        hidden: {
+          transition: { staggerChildren: 0.15, staggerDirection: -1 },
+        },
+      }}
+      viewport={{ amount: 0.7 }}
+      whileInView="visible"
+    >
       <div className="grid grid-cols-1  md:grid-cols-3 w-full  space-y-2 gap-6  max-w-5xl  mt-5    bg-[#F6F6F696]">
         <ItemContainer key={"power-1"}>
           <svg
@@ -51,7 +63,7 @@ export const Achievements = () => {
           <h1 className="text-3xl font-normal ">وحدة سكنية</h1>
         </ItemContainer>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -63,15 +75,19 @@ interface ItemProps {
 
 const ItemContainer = ({ children }: PropsWithChildren) => {
   return (
-    <div
+    <motion.div
       className=" text-center  p-6  "
       style={{
         backgroundImage: `url('./image/back.png')`,
         backgroundBlendMode: "saturation",
       }}
+      variants={{
+        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: 100 },
+      }}
     >
       {children}
-    </div>
+    </motion.div>
   );
 };
 
