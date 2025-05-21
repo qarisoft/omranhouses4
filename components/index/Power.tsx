@@ -1,12 +1,14 @@
 import { Card, CardBody, CardHeader } from "@heroui/react";
 
 import { siteConfig } from "@/config/site";
+
 interface PowerProps {
   title: string;
   description?: string;
   data?: string[];
 }
-export const Power = ({ title, description, data }: PowerProps) => {
+
+export const Power = ({ title }: PowerProps) => {
   return (
     <>
       <div className="text-center bg-gray-0 relative px-2 pt-3  ">
@@ -16,7 +18,6 @@ export const Power = ({ title, description, data }: PowerProps) => {
           </div>
           <div className="  gap-9  max-w-5xl  mx-auto mb-5">
             <div className="flex overflow-auto">
-
               {siteConfig.power.map((value, index) => (
                 <Card
                   key={value.title + value.description}
@@ -25,7 +26,9 @@ export const Power = ({ title, description, data }: PowerProps) => {
                 >
                   <CardBody className=" " dir="rtl">
                     <CardHeader>
-                      <h1 className={"font-semibold text-xl "}>{value.title}</h1>
+                      <h1 className={"font-semibold text-xl "}>
+                        {value.title}
+                      </h1>
                     </CardHeader>
                     <div
                       key={index}
@@ -40,9 +43,7 @@ export const Power = ({ title, description, data }: PowerProps) => {
                 </Card>
               ))}
             </div>
-
           </div>
-
         </div>
       </div>
     </>

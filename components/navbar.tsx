@@ -1,17 +1,16 @@
 "use client";
 import {
-  Navbar as HeroUINavbar,
-  NavbarContent,
-  NavbarMenu,
-  NavbarMenuToggle,
-  NavbarBrand,
-  NavbarItem,
-  NavbarMenuItem,
   Image,
+  Input,
   Kbd,
   Link,
-  Input,
-  link as linkStyles,
+  Navbar as HeroUINavbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
 } from "@heroui/react";
 import NextLink from "next/link";
 import clsx from "clsx";
@@ -19,8 +18,7 @@ import { usePathname } from "next/navigation";
 import React from "react";
 
 import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
-import { GithubIcon, SearchIcon } from "@/components/icons";
+import { SearchIcon } from "@/components/icons";
 
 type SerchInputProps = { searchInput: React.JSX.Element };
 
@@ -116,6 +114,7 @@ export const Navbar = () => {
     </HeroUINavbar>
   );
 };
+
 function NavBarMenu({
   searchInput,
   setIsMenuOpen,
@@ -158,7 +157,6 @@ function NavItemsContent() {
           <NavbarItem key={item.href} isActive={pathname == item.href}>
             <NextLink
               className={clsx(
-
                 " text-xl mb-1 data-[active=true]:text-primary data-[active=true]:font-medium hover:-translate-y-1 duration-200 text-white",
                 // pathname == '/' ? 'text-white' : ''
               )}

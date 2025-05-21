@@ -1,8 +1,6 @@
 import { PropsWithChildren } from "react";
 
 export const Achievements = () => {
-  const achievements = "";
-
   return (
     <div className="flex justify-center">
       <div className="grid grid-cols-1  md:grid-cols-3 w-full  space-y-2 gap-6  max-w-5xl  mt-5    bg-[#F6F6F696]">

@@ -14,7 +14,8 @@ export const AboutSection = () => {
         backgroundImage: "url('./image/11.jpg')",
         // backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        backgroundPosition: 'center',
+        backgroundPosition: "center",
+
         backgroundAttachment: "fixed",
       }}
     >

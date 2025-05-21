@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 import { Image } from "@heroui/image";
+import { Link } from "@heroui/react";
 
 import { Providers } from "./providers";
 
@@ -9,6 +10,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { Social } from "@/components/Social";
+import { WhatsAppIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: {
@@ -114,7 +116,7 @@ export default function RootLayout({
                     {" "}
                     تواصل معنا
                     <div className="flex text-center align-middle   justify-center gap-2">
-                      <img
+                      <Image
                         alt={"dsda"}
                         className=""
                         src="./image/1.jpg"
@@ -136,12 +138,12 @@ export default function RootLayout({
               </div>
             </footer>
           </div>
-          {/* <Link
+          <Link
             className="fixed bg- text-center flex justify-center  bottom-0 z-10  h-12 w-12 rounded-full m-3"
             href={"https://wa.me/966533307024"}
           >
             <WhatsAppIcon size={50} />
-          </Link> */}
+          </Link>
         </Providers>
       </body>
     </html>

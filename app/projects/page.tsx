@@ -1,16 +1,19 @@
 "use client";
-import { Card, CardHeader, CardBody, Image } from "@heroui/react";
 import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerBody,
-  DrawerFooter,
   Button,
+  Card,
+  CardBody,
+  CardHeader,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  Image,
   useDisclosure,
 } from "@heroui/react";
-// import Image from "next/image";
 
+// import Image from "next/image";
 import { Achievements } from "@/components/index/Achements";
 import { data2, PageItemWithPhotos } from "@/config/data";
 
@@ -57,9 +60,9 @@ function AppCard({ item }: { item: PageItemWithPhotos }) {
                 <DrawerBody>
                   {item.videoUrl && (
                     <div className="  flex justify-center ">
-                      <video autoPlay className="w-full" controls >
+                      <video autoPlay controls className="w-full">
+                        <track default kind="captions" src="SUBTITLE_PATH" />
                         <source src={item.videoUrl} type="video/mp4" />
-
                       </video>
                     </div>
                   )}
