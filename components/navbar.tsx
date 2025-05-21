@@ -50,8 +50,8 @@ export const Navbar = () => {
   return (
     <HeroUINavbar
       // isBordered
-      shouldHideOnScroll
-      className="bg-transparent z-50"
+      // shouldHideOnScroll
+      className="bg-mprimary z-50"
       classNames={{
         item: [
           "flex",
@@ -85,7 +85,7 @@ export const Navbar = () => {
               alt="'"
               className=" top-0   left-0"
               height={120}
-              src={"./logo-small-1.png"}
+              src={"./logo-gold.png"}
               width={120}
             />
             <Image
@@ -159,8 +159,8 @@ function NavItemsContent() {
             <NextLink
               className={clsx(
 
-                " text-xl mb-1 data-[active=true]:text-primary data-[active=true]:font-medium hover:-translate-y-1 duration-200",
-                pathname == '/' ? 'text-white' : ''
+                " text-xl mb-1 data-[active=true]:text-primary data-[active=true]:font-medium hover:-translate-y-1 duration-200 text-white",
+                // pathname == '/' ? 'text-white' : ''
               )}
               // color="white"
               href={item.href}

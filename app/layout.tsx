@@ -1,6 +1,5 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Link } from "@heroui/link";
 import clsx from "clsx";
 import { Image } from "@heroui/image";
 
@@ -10,7 +9,6 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { Social } from "@/components/Social";
-import { WhatsAppIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: {
@@ -64,7 +62,6 @@ export default function RootLayout({
             <footer className={"flex-1 pt-5 border-t "}>
               <div className="md:flex justify-between md:max-w-5xl mx-auto pb-3 gap-3">
                 <div className=" md:flex flex-col   text-center md:text-start gap-1 text-large">
-                  <h1 className="font-extrabold">روابط هامة</h1>
                   <div className="font-medium">الرئيسية</div>
                   <div className="font-medium">عن الشركة</div>
                   <div className="font-medium">مشاريعنا</div>
