@@ -12,7 +12,7 @@ export const Achievements = () => {
           transition: { staggerChildren: 0.15, staggerDirection: -1 },
         },
       }}
-      viewport={{ amount: 0.7 }}
+      viewport={{ amount: 0.7, once: true }}
       whileInView="visible"
     >
       <div className="grid grid-cols-1  md:grid-cols-3 w-full  space-y-2 gap-6  max-w-5xl  mt-5    bg-[#F6F6F696]">

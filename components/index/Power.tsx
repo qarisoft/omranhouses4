@@ -21,7 +21,7 @@ export const Power = ({ title }: PowerProps) => {
             transition: { staggerChildren: 0.15, staggerDirection: -1 },
           },
         }}
-        viewport={{ amount: 0.7 }}
+        viewport={{ amount: 0.7, once: true }}
         whileInView="visible"
       >
         <div className="       ">
